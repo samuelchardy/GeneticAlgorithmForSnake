@@ -6,13 +6,34 @@ GENERATIONS = 10
 NUM_OF_CHROMOSOMES = 10
 
 chromosomes = [[0]*NUM_OF_CHROMOSOMES]*POPULATION
+fitness = [0]*NUM_OF_CHROMOSOMES
 
+game = myModule.Game()
+
+#Generate Population Chromosomes
 for y in range(POPULATION):
     for i in range(10):
         chromosomes[y][i] = random.randint(0,3)
+    fitness[y] = game.runGame(chromosomes[y])
+    print(chromosomes[y], "  fitness: ", fitness[y])
 
-    print(chromosomes[y])
 
-game = myModule.Game([1,0,0,1,0,0,3,0,3,0])
-print(game.runGame())
+for g in range(GENERATIONS):
 
+    #selection
+
+
+    #crossover
+
+
+    #mutation
+
+
+    #Fill new population
+
+
+
+    
+    
+    
+    
